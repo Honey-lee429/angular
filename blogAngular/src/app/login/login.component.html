@@ -1,0 +1,33 @@
+<div class="container-fluid p-0">
+    <div class="row background m-0 d-flex align-items-center">
+        <div class="col-12 p-0">
+            <img src="https://media.gazetadopovo.com.br/sites/2/2021/05/01174323/otimismo-ensinar-filhos-960x540.jpg" class="rounded-circle center m-auto" width="100px" height="100px">
+
+            <div class="form-group center">
+                <form action="">
+                    <label for="email">Username</label>
+                    <input [(ngModel)]='userLogin.email' class="form-control mb-2" type="email" id="email" name="email" placeholder="Email ID">
+    
+                    <label for="senha">Password</label>
+                    <input [(ngModel)]='userLogin.senha'  class="form-control mb-2" type="password" id="senha" name="senha" placeholder="Password">
+
+                    <div>
+                        <input type="checkbox" name="" id="remember" class="me-2"> <label for="remember">Remember me</label>
+                    </div>
+        
+                </form>
+                <button class="btn btn-info text-white mt-2" type="submit" (click)='entrar()'>LOGIN</button>
+            </div>
+
+             <hr class="mt-5 mb-5"> 
+             <p class="text-center">
+                Don't have an account?
+                <a routerLink='/cadastrar'>Sign up</a>
+                
+             </p>  
+        </div>
+          
+        
+
+    </div>
+</div>

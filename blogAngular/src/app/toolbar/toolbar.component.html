@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-nav-scroll bg-warning">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+        <li class="nav-item">
+          <img src="https://media.gazetadopovo.com.br/sites/2/2021/05/01174323/otimismo-ensinar-filhos-960x540.jpg" alt="Imagem do Usuário" class="img-fluid rounded-circle" width="50px" height="50px">
+        </li>
+        <li class="nav-item ps-3 ">
+          <p class="m-0 fw-bold text-white fs-5">{{nome}}</p>  <!-- interpolar nome para deixar dinâmico e trocar para o nome do usuário logado, no environment do toolbar.component.ts -->
+        <!-- {{interpolar c/ o environment dentro do tollbar.component.ts}} -->
+        </li>
+        <li class="nav-item ps-3 ">
+          <a href="">
+            <img src="https://image.flaticon.com/icons/png/512/1647/1647897.png" width="20px">
+          </a> 
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Redes Sociais
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Git Hub</a></li>
+            <li><a class="dropdown-item" href="#">LinkedIn</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+          </ul>
+        </li>
+  
+      </ul>
+
+      <ul class="navbar-nav me-2 mb-2 mb-lg-0">
+        <li class="nav-item ps-3">
+          <a (click)='sair()' href="" class="d-flex">
+            <p class="m-0 fw-bold text-white fs-5 pe-2">Sair</p>
+            <img src="https://image.flaticon.com/icons/png/512/1828/1828427.png" width="20px">
+          </a>
+          
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>

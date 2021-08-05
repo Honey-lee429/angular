@@ -1,0 +1,19 @@
+.form {
+    background-color: rgb(63, 63, 117);
+    color:azure;
+    max-width: 60%;
+    margin: auto;
+}
+
+.green {
+    color: green;
+}
+
+ul {
+    list-style-type: none;
+    /* list-style-image: url(https://image.flaticon.com/icons/png/512/686/686458.png);  */
+}
+
+.itens::before {
+    content: "🟊";
+} 

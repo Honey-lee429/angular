@@ -1,0 +1,3 @@
+<app-toolbar *ngIf='auth.logado()'></app-toolbar> <!-- *ngIf='auth.logado()' busca o método criado no auth.service.ts -->
+<router-outlet></router-outlet>
+<app-footer *ngIf='auth.logado'></app-footer>

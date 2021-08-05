@@ -1,0 +1,48 @@
+<div class="cantainer-fluid bg-secondary">
+    <div class="row ">
+        <a routerLink='/home' class="text-left">
+            <i class="fa fa-angle-double-left" aria-hidden="true"></i> inicio
+        </a>
+        <div class="col d-flex flex-column align-items-center text-white m-5">
+            <h1 class="m-2 fs-54">Temas</h1>
+            <h5 class="m-2 fs-18">Cadastre seu tema</h5>
+            <input [(ngModel)]='tema.descricao' class="m-2" type="text" name="descricao" id="descricao" placeholder="Digite seu tema">
+            <button  class="btn btn-warning text-white" type="submit" (click)='cadastrar()'>Cadastrar</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col">
+            <h2>Todos os Temas</h2>
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-5 d-flex justify-content-center">
+        <div class="col-md-6">
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col" class="">Modificações</th>
+      
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor='let qqrNome of listaTemas'>
+                    <th>{{qqrNome.id_tema}}</th>
+                    <td>{{qqrNome.descricao}}</td>
+                    <td class="d-flex justify-content-end">
+                      <button class="btn btn-info me-3" [routerLink]="['/tema-edit', qqrNome.id_tema]">Editar</button>
+                      <button class="btn btn-danger" [routerLink]="['/tema-delete', qqrNome.id_tema]">Apagar</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              
+        </div>
+    </div>
+</div>
+

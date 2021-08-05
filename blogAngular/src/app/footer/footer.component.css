@@ -1,0 +1,19 @@
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.icon-facebook:hover {
+    background-color: #3b5998;
+    border-radius: 50%;
+}
+
+.icon-instagram:hover {
+    background-color: #c13584;
+    border-radius: 25%;
+}
+
+.icon-linkedin:hover {
+    background-color: #0072b1;
+    border-radius: 50%;
+}
