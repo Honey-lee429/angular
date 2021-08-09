@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment.prod';
 export class ToolbarComponent implements OnInit {
   nome = environment.nome //para deixar dinâmico toda vez que o usuário logar
   id = environment.id
+  
 
   constructor(
     private router: Router

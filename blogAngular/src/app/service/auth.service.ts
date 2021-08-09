@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
@@ -13,8 +13,12 @@ export class AuthService {
   constructor(
     private http: HttpClient
   ) {}
+
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token)
+  }
   
-  login(userLogin: UserLogin): Observable<UserLogin>{
+  login(userLogin: UserLogin): Observable<UserLogin>{ // Observable serve para garantir que o tipo da variável será passado corretamente.
     return this.http.post<UserLogin>('http://localhost:8080/usuario/logar', userLogin)
   }
 
@@ -30,7 +34,9 @@ export class AuthService {
       ok = true
     }
     return ok
+  }
 
-
+  getByIdUser(id: number): Observable<User>{
+    return this.http.get<User>(`http://localhost:8080/usuario/${id}`, this.token)
   }
 }

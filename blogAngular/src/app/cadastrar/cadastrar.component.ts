@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { User } from '../model/user';
 import { AuthService } from '../service/auth.service';
 
@@ -13,14 +14,15 @@ export class CadastrarComponent implements OnInit {
   user: User = new User
   confSenha: string
   tipoUsuario: string
+  idUser: number
 
-  constructor( //tudo que coloca dentro do contrutor é injeção de dependência
+  constructor( //tudo que coloca dentro do contrutor é injeção de dependência 
     private authService: AuthService,
     private router: Router
   ) { }
 
   ngOnInit() { //A callback method that is invoked immediately after the default change detector has checked the directive's data-bound properties for the first time, and before any of the view or content children have been checked. It is invoked only once when the directive is instantiated.
-    window.scroll(0, 0)
+    window.scroll(0, 0)  
   }
 
   confirmaSenha(event: any) {

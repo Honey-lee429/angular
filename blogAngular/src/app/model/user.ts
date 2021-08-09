@@ -1,5 +1,6 @@
 //inserir "strictPropertyInitialization" no tsconfig.json   
 
+import { Postagem } from "./postagem"
 import { Tema } from "./tema"
 
 export class User {
@@ -10,5 +11,7 @@ export class User {
     public senha: string
     public foto: string
     public tipo: string
-    public tema: Tema
+    public tema: Tema[]
+    public texto: string
+    public postagem: Postagem[]
 }

@@ -24,7 +24,7 @@ export class TemaEditComponent implements OnInit {
       this.router.navigate(['/home'])
     }
 
-    let id = this.route.snapshot.params['id'] //id que inserimos no app-routing.module
+    let id = this.route.snapshot.params['id'] //id que inserimos no app-routing.module. Pegar o parâmetro enviado atrave´s da rota
     this.findByIdTema(id)
   }
 
